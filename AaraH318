@@ -1,10 +1,124 @@
-- 👋 Hi, I’m @Aaron31896
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+package Student;
 
-<!---
-Aaron31896/Aaron31896 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+public class StudentDetail {
+	
+	    public String name;
+	    public int age;
+	    public Mark mark;
+	   
+	    public StudentDetail(String name, int age,  Mark mark){
+	        this.name = name;
+	        this.age = age;
+	        this.mark=mark;
+	    }
+	        public String getName(){
+	            return name;
+	        }
+            public int getAge(){
+	            return age;
+	        }
+			public Mark getMark() {
+				return mark;
+			}
+			public void setMark(Mark mark) {
+				this.mark = mark;
+			}
+			public void setName(String name) {
+				this.name = name;
+			}
+			public void setAge(int age) {
+				this.age = age;
+			}
+           
+	     }
+       package Student;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class StudentRecords {
+	public static void main(String args[]) {
+		 List<StudentDetail> list = new ArrayList<StudentDetail>();
+		 List<Mark> l1 = new ArrayList<Mark>();
+		 Mark m1=new Mark(50,54,40,70,100);
+		 Mark m2=new Mark(60,66,60,40,50);
+		 Mark m3=new Mark(40,50,80,60,80);
+		 Mark m4=new Mark(90,30,60,70,70);
+		 StudentDetail d1=new  StudentDetail("AARON  ",26,m1);  
+		 StudentDetail d2=new  StudentDetail("SAM    ",26,m2);  
+		 StudentDetail d3=new  StudentDetail("KISHORE",26,m3); 
+		 StudentDetail d4=new  StudentDetail("PRADEEP",26,m4); 
+    	 list.add(d1);  
+		 list.add(d2); 
+		 list.add(d3);
+		 list.add(d4);
+		 Iterator itr=list.iterator();      
+	     while(itr.hasNext()) {  
+	    	  StudentDetail detail =(StudentDetail) itr.next();
+              System.out.println(detail.getName()+" "+detail.getAge()+" "+"ENGLISH"+ " "+detail.getMark().English+" "+"TAMIL"+" "+detail.getMark().Tamil+" "+"SCIENCE"+" "+detail.getMark().Science+" "+"MATHS"+" "+detail.getMark().Maths+ " "+"SOCIAL"+" "+detail.getMark().Social);
+	    	  
+ 
+
+ 
+		   
+	}
+}
+}
+package Student;
+
+public class Mark {
+
+	public int English;
+	public int Tamil;
+	public int Science;
+	public int Maths;
+	public int Social;
+
+	public Mark(int English, int Tamil,int Science,int Maths,int Social){
+        this.English = English;
+        this.Tamil = Tamil;
+        this.Science=Science;
+        this.Maths=Maths;
+        this.Social=Social;
+    }
+
+	public int getEnglish() {
+		return English;
+	}
+
+	public void setEnglish(int english) {
+		English = english;
+	}
+
+	public int getTamil() {
+		return Tamil;
+	}
+
+	public void setTamil(int tamil) {
+		Tamil = tamil;
+	}
+
+	public int getScience() {
+		return Science;
+	}
+
+	public void setScience(int science) {
+		Science = science;
+	}
+
+	public int getMaths() {
+		return Maths;
+	}
+
+	public void setMaths(int maths) {
+		Maths = maths;
+	}
+
+	public int getSocial() {
+		return Social;
+	}
+
+	public void setSocial(int social) {
+		Social = social;
+	}
+}
